@@ -1,14 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 20px;
+}
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+.flex-grid-thirds {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 0 20px 0;
+}
+.flex-grid-thirds .col {
+    width: 24%;
+    margin-bottom: 20px;
+}
 
-// Variables
-@import 'variables';
+.images {
+    width: 100%;
+    border-radius: 5px;
+}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+.footer {
+    display: flex;
+    justify-content: center;
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 676px) {
+    .flex-grid-thirds {
+        display: block;
+        .col {
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+    }
 }
