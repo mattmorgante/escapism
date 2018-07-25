@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/laravel', function () {
-    return view('welcome');
-});
-
 Route::get('/', 'PhotosController@home');
-
-Route::get('/photos', 'PhotosController@index');
+Route::get('/places/{slug}', 'PhotosController@show');
