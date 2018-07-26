@@ -13,10 +13,15 @@
     <br>
     <span>{{ $photo->blurb }}</span>
     <br>
-    <span>{{ $photo->tags }}</span>
+    <div class="flex-grid-thirds">
+        @foreach ($tags as $tag)
+        <div class="col tag-wrapper">
+            <button class="tag-buttons"><a href="/tag/{{ $tag }}">#{{ $tag}}</a></button>
+        </div>
+        @endforeach
+    </div>
     <br>
-    <button><a target="_blank" href="{{ $photo->link }}">Read About This Place</a></button>
+    <div class="flex-grid-thirds">
+        <button class="external-button"><a class="external-link" target="_blank" href="{{ $photo->link }}">Read About This Place</a></button>
+    </div>
 </div>
-
-<span></span>
-

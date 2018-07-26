@@ -1,13 +1,9 @@
-compile assets 
+add photos (currently at 13 / 64) - not too many the same! 
 
-npm run dev 
+make tagging system work (just like vegaroo)
 
-create database 
+Style the header and captions 
 
-?? 
-
-fetch 16 random images from database 
-display 
-each one with detail page or modal to display 
-
-
+CDN - Aws s3 for hosting images 
+Hover state on images 
+Keep clean design 

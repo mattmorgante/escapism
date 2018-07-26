@@ -20,8 +20,13 @@ class PhotosController extends Controller
 
     public function show($slug) {
         $photo = Photos::where('slug', $slug)->first();
+
+        $tags = explode(',', $photo->tags);
+        $tags = str_replace(' ', '', $tags);
+
         return view('photoDetail')->with([
-            'photo' => $photo
+            'photo' => $photo,
+            'tags' => $tags
         ]);
     }
 }

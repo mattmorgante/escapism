@@ -13,3 +13,5 @@
 
 Route::get('/', 'PhotosController@home');
 Route::get('/places/{slug}', 'PhotosController@show');
+Route::get('/tags', 'TagsController@index');
+Route::get('/tag/{tag}', 'TagsController@show');
