@@ -17,5 +17,5 @@
 </div>
 
 <div class="footer">
-    <button><a href="/">Refresh</a></button>
+    <button class="external-button"><a class="external-link" href="/">Refresh</a></button>
 </div>

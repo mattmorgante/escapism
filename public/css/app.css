@@ -81,6 +81,17 @@ nav ul li a {
 .images {
   width: 100%;
   border-radius: 5px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.images:hover {
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
 }
 
 .detail_image {
