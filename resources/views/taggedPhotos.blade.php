@@ -3,7 +3,7 @@
 @include('partials.nav')
 
 <div class="header">
-    <h1>Photos with {{ $tagName }}</h1>
+    <h1>#{{ $tagName }}</h1>
 </div>
 
 <div class="flex-grid-thirds">

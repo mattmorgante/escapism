@@ -1,5 +1,7 @@
-add photos (currently at 13 / 64) - not too many the same! 
+add photos (currently at 20 / 64) - not too many the same! 
 
-Style below images  
 Make all parts of all blocks clickable
 CDN - Aws s3 for hosting images 
+Places nearby 
+Travel information 
+How much does it cost to travel there / get there 

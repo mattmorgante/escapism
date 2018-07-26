@@ -25,7 +25,7 @@ class PhotosController extends Controller
         $tags = explode(',', $photo->tags);
         $tags = str_replace(' ', '', $tags);
 
-        Mapper::map($photo->lat, $photo->long, ['zoom' => 9]);
+        Mapper::map($photo->lat, $photo->long, ['zoom' => 5]);
 
         return view('photoDetail')->with([
             'photo' => $photo,
