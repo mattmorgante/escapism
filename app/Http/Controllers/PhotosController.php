@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Photos;
 use App\Taglines;
+use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 use Illuminate\Http\Request;
 
 class PhotosController extends Controller
@@ -24,9 +25,12 @@ class PhotosController extends Controller
         $tags = explode(',', $photo->tags);
         $tags = str_replace(' ', '', $tags);
 
+        Mapper::map($photo->lat, $photo->long, ['zoom' => 9]);
+
         return view('photoDetail')->with([
             'photo' => $photo,
             'tags' => $tags
         ]);
     }
+
 }

@@ -42,6 +42,19 @@ nav ul li a {
     .nav-left ul {
         font-size: 28px;
     }
+
+    .below-image {
+        width: 85vw;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .google-map {
+        width: 40vw !important;
+        height: 30vw !important;
+    }
+
 }
 
 .nav-left ul {
@@ -64,7 +77,6 @@ nav ul li a {
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-between;
-    margin: 0 0 20px 0;
 }
 .flex-grid-thirds .col {
     width: 24%;
@@ -93,6 +105,7 @@ nav ul li a {
 .image_wrapper {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .footer {
@@ -159,6 +172,7 @@ button a {
     background-color: white;
     color: black;
     border: 1px solid #555555;
+    margin: 15px;
 }
 
 .tag-buttons:hover {
@@ -182,7 +196,7 @@ button a {
     color: white;
 }
 
-.caption_wrapper {
+.google-map {
     width: 85vw;
-    margin: 0 auto;
+    height: 60vw;
 }
