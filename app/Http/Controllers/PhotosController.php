@@ -27,9 +27,15 @@ class PhotosController extends Controller
 
         Mapper::map($photo->lat, $photo->long, ['zoom' => 5]);
 
+        $nearby = [];
+        $nearby = Photos::whereBetween('lat', [$photo->lat - 5, $photo->lat + 5])->whereBetween('long',
+            [$photo->long -5, $photo->long + 5])->where('slug', '!=', $slug)->get();
+
+
         return view('photoDetail')->with([
             'photo' => $photo,
-            'tags' => $tags
+            'tags' => $tags,
+            'nearby' => $nearby
         ]);
     }
 

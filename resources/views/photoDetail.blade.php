@@ -31,3 +31,17 @@
         {!! Mapper::render() !!}
     </div>
 </div>
+
+<div class="header">
+    <h2>Other Places Nearby</h2>
+</div>
+
+<div class="flex-grid-thirds">
+    @foreach ($nearby as $photo)
+    <div class="col">
+        <a href="/places/{{$photo->slug}}">
+            <img class="images"  src="/img/{{ $photo->thumbnail }}"><br>
+        </a>
+    </div>
+    @endforeach
+</div>

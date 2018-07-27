@@ -14,8 +14,8 @@ class AddLatLongToPhotos extends Migration
     public function up()
     {
         Schema::table('photos', function (Blueprint $table) {
-            $table->string('lat');
-            $table->string('long');
+            $table->float('lat');
+            $table->float('long');
         });
     }
 

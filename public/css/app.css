@@ -230,3 +230,8 @@ button a {
   height: 60vw;
 }
 
+.caption_wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
