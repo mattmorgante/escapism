@@ -33,4 +33,8 @@ class PhotosController extends Controller
         ]);
     }
 
+    public function test() {
+        dd('something is working');
+    }
+
 }
