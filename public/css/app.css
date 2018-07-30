@@ -30,10 +30,6 @@ nav ul li a {
 }
 
 @media (min-width: 768px) {
-  .nav-right ul li {
-    padding-left: 20px !important;
-  }
-
   nav {
     height: 58px !important;
   }
@@ -71,6 +67,10 @@ nav ul li a {
 .nav-right ul li {
   display: inline-block;
   font-size: 20px;
+}
+
+.nav-right ul li:first-child {
+  padding-right: 15px;
 }
 
 .flex-grid-thirds {
@@ -169,6 +169,10 @@ button a {
     width: 100%;
     margin: 0 0 10px 0;
   }
+
+  .google-map {
+    margin: 0 auto;
+  }
 }
 
 .tags {
@@ -230,7 +234,6 @@ button a {
 .google-map {
   width: 85vw;
   height: 60vw;
-  margin: 0 auto;
 }
 
 #full-size-map {

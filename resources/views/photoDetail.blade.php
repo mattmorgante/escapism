@@ -13,9 +13,6 @@
 
 <div class="below-image">
     <div class="caption_wrapper">
-        <br>
-        <span>{{ $photo->blurb }}</span>
-        <br>
         <div class="flex-grid-thirds">
             @foreach ($tags as $tag)
             <div class="tag-wrapper">
