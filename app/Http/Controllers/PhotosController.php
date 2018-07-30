@@ -23,7 +23,7 @@ class PhotosController extends Controller
     public function show($slug) {
         $photo = Photos::where('slug', $slug)->first();
 
-        $url = Storage::url('img/sg_fs.jpg');
+        $url = Storage::url('img/'. $photo->pic . '_fs.jpg');
 
         $tags = explode(',', $photo->tags);
         $tags = str_replace(' ', '', $tags);

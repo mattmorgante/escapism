@@ -10,7 +10,7 @@
     @foreach ($photos as $photo)
         <div class="col">
             <a href="/places/{{$photo->slug}}">
-                <img class="images"  src="/img/{{ $photo->thumbnail }}"><br>
+                <img class="images"  src="{{ Storage::url('img/'. $photo->pic . '_tn.jpg') }}"><br>
             </a>
         </div>
     @endforeach
