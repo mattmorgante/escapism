@@ -6,6 +6,7 @@ use App\Photos;
 use App\Taglines;
 use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PhotosController extends Controller
 {
@@ -22,6 +23,8 @@ class PhotosController extends Controller
     public function show($slug) {
         $photo = Photos::where('slug', $slug)->first();
 
+        $url = Storage::url('img/sg_fs.jpg');
+
         $tags = explode(',', $photo->tags);
         $tags = str_replace(' ', '', $tags);
 
@@ -34,7 +37,8 @@ class PhotosController extends Controller
         return view('photoDetail')->with([
             'photo' => $photo,
             'tags' => $tags,
-            'nearby' => $nearby
+            'nearby' => $nearby,
+            'url' => $url
         ]);
     }
 

@@ -6,7 +6,7 @@
 </div>
 
 <div class="image_wrapper">
-    <img class="detail_image"  src="/img/{{ $photo->pic }}">
+    <img src="{{ $url }}">
 </div>
 
 <div class="below-image">

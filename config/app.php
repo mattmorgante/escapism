@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -162,7 +162,7 @@ return [
 
         // custom service providers
         Cornford\Googlmapper\MapperServiceProvider::class,
-
+        Barryvdh\Cors\ServiceProvider::class,
 
     ],
 
