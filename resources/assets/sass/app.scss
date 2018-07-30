@@ -135,6 +135,8 @@ button a {
 @media (max-width: 676px) {
     .flex-grid-thirds {
         display: block;
+        margin-top: 20px;
+        line-height: 30px;
         .col {
             width: 100%;
             margin: 0 0 10px 0;
@@ -200,6 +202,7 @@ button a {
 .google-map {
     width: 85vw;
     height: 60vw;
+    margin: 0 auto;
 }
 
 .caption_wrapper {

@@ -163,6 +163,7 @@ return [
         // custom service providers
         Cornford\Googlmapper\MapperServiceProvider::class,
 
+
     ],
 
 

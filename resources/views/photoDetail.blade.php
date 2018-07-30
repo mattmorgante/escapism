@@ -32,6 +32,9 @@
     </div>
 </div>
 
+
+@if (count($nearby) != 0 )
+
 <div class="header">
     <h2>Other Places Nearby</h2>
 </div>
@@ -45,3 +48,4 @@
     </div>
     @endforeach
 </div>
+@endif
