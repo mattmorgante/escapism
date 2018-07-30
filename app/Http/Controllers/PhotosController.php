@@ -38,6 +38,14 @@ class PhotosController extends Controller
         ]);
     }
 
+    public function map () {
+        $photos = Photos::all();
+
+        return view('map')->with([
+            'photos' => $photos
+        ]);
+    }
+
     public function test() {
         dd('something is working');
     }

@@ -6,9 +6,8 @@
     </div>
     <div class="nav-right">
         <ul>
-            <li>
-                <a href="/tags">Tags</a>
-            </li>
+            <li><a href="/tags">Tags</a></li>
+            <li><a href="/map">Map</a></li>
         </ul>
     </div>
 </nav>
