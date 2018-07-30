@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://maps.google.com/maps/api/js?sensor=false"
+    <script src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}"
             type="text/javascript"></script>
 </head>
 <body>
