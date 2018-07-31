@@ -3,6 +3,9 @@
             type="text/javascript"></script>
 </head>
 @extends('layouts.app')
+
+@section('content')
+
 @include('partials.nav')
 
 <div id="full-size-map"></div>
@@ -41,16 +44,6 @@
         });
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            console.log(map.zoom);
-            // if ( map.zoom = 8 ) {
-            //     return function() {
-            //         window.open(
-            //             '/places/' + locations[i][4],
-            //             '_blank'
-            //         );
-            //     }
-            // }
-
             return function() {
                 contentString = '<a target="_blank" href="/places/' + locations[i][4] + '">'+ locations[i][0] + '</a>';
                 infowindow.setContent(contentString);
@@ -62,5 +55,5 @@
         })(marker, i));
     }
 </script>
-</body>
-</html>
+
+@endsection

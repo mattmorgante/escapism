@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('content')
+
+@include('partials.seo')
+
 @include('partials.nav')
 
 <div class="header">
@@ -26,3 +30,5 @@
         window.location.href = '/?q=' + (new Date().getTime());
     }
 </script>
+
+@endsection

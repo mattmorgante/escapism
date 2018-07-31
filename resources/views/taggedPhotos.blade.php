@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 
 <div class="header">
@@ -15,3 +17,5 @@
     </div>
     @endforeach
 </div>
+
+@endsection

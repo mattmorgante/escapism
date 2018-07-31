@@ -17,7 +17,7 @@ class PhotosController extends Controller
             $photo->url = Storage::url('img/'. $photo->pic . '_tn.jpg');
         }
 
-        return view('test')->with([
+        return view('home')->with([
             'photos' => $photos,
             'tagline' => $tagline
         ]);
@@ -57,10 +57,6 @@ class PhotosController extends Controller
         return view('map')->with([
             'photos' => $photos
         ]);
-    }
-
-    public function test() {
-        dd('something is working');
     }
 
 }

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('content')
+
 @include('partials.nav')
 
 <div class="flex-grid-thirds">
@@ -11,3 +13,5 @@
     </div>
 @endforeach
 </div>
+
+@endsection

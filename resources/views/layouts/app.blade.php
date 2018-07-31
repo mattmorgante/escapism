@@ -6,14 +6,20 @@
     <link rel="canonical" href="{!! request()->fullUrl() !!}" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta name="robots" content="index,fo2llow">
+    <meta name="robots" content="index,follow">
     <meta property="og:url" content="https://escape-today.herokuapp.com/" />
     <meta property="og:site_name" content="escapism" />
-
-    <link rel="shortcut icon" href="/img/favicon.ico">
     <meta name="msapplication-config" content="/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Escapism - Find your next favorite destination</title>
+    <meta name="description" content="Escapism is a collection of beautiful and inspiring destinations around the world
+     to plan your
+next vacation. Come find something awesome!"/>
+    <meta property="og:title" content="Escapism | Find your next favorite destination" />
+    <meta property="og:description" content="A collection of beautiful and inspiring destinations around the world to plan your
+next vacation"/>
+
     @if (env('APP_ENV') == 'production')
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56273136-5"></script>

@@ -1,5 +1,7 @@
+<title>{{ $photo->location }}</title>
 @extends('layouts.app')
 
+@section('content')
 @include('partials.nav')
 <div class="header">
     <h1>{{ $photo->location }}</h1>
@@ -48,3 +50,5 @@
     @endforeach
 </div>
 @endif
+
+@endsection
