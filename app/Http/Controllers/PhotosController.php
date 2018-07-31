@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Photos;
 use App\Taglines;
 use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Storage;
+use League\Flysystem\Adapter\Local;
 
 class PhotosController extends Controller
 {
@@ -23,7 +26,13 @@ class PhotosController extends Controller
     public function show($slug) {
         $photo = Photos::where('slug', $slug)->first();
 
-        $url = Storage::url('img/'. $photo->pic . '_fs.jpg');
+        $key = md5('s3-img'.$photo->slug);
+        if (Cache::has( $key )) {
+            $url = Cache::get( $key );
+        } else {
+            $url = Storage::url('img/'. $photo->pic . '_fs.jpg');
+            Cache::put( $key, $url, 60 );
+        }
 
         $tags = explode(',', $photo->tags);
         $tags = str_replace(' ', '', $tags);

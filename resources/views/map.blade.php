@@ -19,7 +19,7 @@
 
     for(i=0; i< photos.length; i++){
         var name = photos[i].location;
-        var lat = photos[i].lat;
+        var lat = photos[i].lat;x
         var long = photos[i].long;
         var link = photos[i].slug;
         locations.push([name, lat, long, i, link]);
