@@ -1,7 +1,7 @@
 <nav class="nav">
     <div class="nav-left">
         <ul>
-            <a href="/">Escapism</a>
+            <a class="external-link" onclick=refresh()>Escapism</a>
         </ul>
     </div>
     <div class="nav-right">
@@ -11,3 +11,9 @@
         </ul>
     </div>
 </nav>
+
+<script type="text/javascript">
+    function refresh () {
+        window.location.href = '/?q=' + (new Date().getTime());
+    }
+</script>

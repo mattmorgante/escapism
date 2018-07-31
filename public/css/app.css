@@ -223,6 +223,10 @@ button a {
   border: 2px solid #e4a023;
 }
 
+.external-link {
+  cursor: pointer;
+}
+
 .external-button:hover {
   background-color: #e4a023;
 }

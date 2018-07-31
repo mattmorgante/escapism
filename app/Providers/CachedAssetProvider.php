@@ -17,12 +17,7 @@ class CachedAssetProvider extends ServiceProvider
      */
     public function boot()
     {
-        Storage::extend('s3-cached', function ($app, $config) {
-            $adapter = $app['filesystem']->createS3Driver($config);
-            $store = new Memory();
-
-            return new Filesystem(new CachedAdapter($adapter->getDriver()->getAdapter(), $store));
-        });
+        //
     }
 
     /**

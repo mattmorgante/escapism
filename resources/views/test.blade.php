@@ -17,5 +17,12 @@
 </div>
 
 <div class="footer">
-    <button class="external-button"><a class="external-link" href="/">Refresh</a></button>
+    <button class="external-button"><a class="external-link" onclick=refresh()>Refresh</a></button>
 </div>
+
+
+<script type="text/javascript">
+    function refresh () {
+        window.location.href = '/?q=' + (new Date().getTime());
+    }
+</script>
