@@ -49,8 +49,6 @@
                 infowindow.setContent(contentString);
                 // infowindow.setContent(locations[i][0]);
                 infowindow.open(map, marker);
-                map.setZoom(6);
-                map.setCenter(marker.getPosition());
             }
         })(marker, i));
     }

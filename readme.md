@@ -1,3 +1,7 @@
+Tanzania 
+Croatia 
+
+
 add photos (currently at 20 / 64) - not too many the same! 
 
 Make all parts of all blocks clickable
