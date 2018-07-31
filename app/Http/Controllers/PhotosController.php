@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Photos;
 use App\Taglines;
-use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\Adapter\Local;
+use Cornford\Googlmapper\Facades\MapperFacade as Mapper;
 
 class PhotosController extends Controller
 {
