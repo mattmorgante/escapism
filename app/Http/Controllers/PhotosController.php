@@ -13,6 +13,9 @@ class PhotosController extends Controller
     public function home() {
         $tagline = Taglines::all()->random();
         $photos = Photos::all()->random(8)->shuffle();
+        foreach ($photos as $photo) {
+            $photo->url = Storage::url('img/'. $photo->pic . '_tn.jpg');
+        }
 
         return view('test')->with([
             'photos' => $photos,
