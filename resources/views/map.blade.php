@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
 <head>
     <script src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}"
             type="text/javascript"></script>
 </head>
-<body>
 @extends('layouts.app')
 @include('partials.nav')
 
@@ -44,13 +41,23 @@
         });
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            console.log(map.zoom);
+            // if ( map.zoom = 8 ) {
+            //     return function() {
+            //         window.open(
+            //             '/places/' + locations[i][4],
+            //             '_blank'
+            //         );
+            //     }
+            // }
+
             return function() {
-                infowindow.setContent(locations[i][0]);
+                contentString = '<a target="_blank" href="/places/' + locations[i][4] + '">'+ locations[i][0] + '</a>';
+                infowindow.setContent(contentString);
+                // infowindow.setContent(locations[i][0]);
                 infowindow.open(map, marker);
-                window.open(
-                    '/places/' + locations[i][4],
-                    '_blank'
-                );
+                map.setZoom(6);
+                map.setCenter(marker.getPosition());
             }
         })(marker, i));
     }

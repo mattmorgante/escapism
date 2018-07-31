@@ -14,13 +14,21 @@
     <meta name="msapplication-config" content="/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    @if (env('APP_ENV') == 'production')
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56273136-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    @section('header.javascript')
-    @show
+        gtag('config', 'UA-56273136-5');
+    </script>
+    @endif
+
 </head>
 <body>
-
-@yield('content')
+    @yield('content')
 
 </body>
 

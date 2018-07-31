@@ -53,6 +53,12 @@ nav ul li a {
 
 }
 
+@media (max-width: 767px) {
+    .google-map {
+        margin: 0 auto;
+    }
+}
+
 .nav-left ul {
     text-align: left;
     font-size: 20px;
