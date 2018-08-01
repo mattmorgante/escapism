@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Photos;
 use App\Tags;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class TagsController extends Controller
 {
@@ -19,6 +20,10 @@ class TagsController extends Controller
         $tag = Tags::where('name', $tag)->first();
 
         $photos = Photos::where('tags', 'like', '%' . $tag->name . '%')->get();
+
+        foreach ($photos as $photo) {
+            $photo->url = Storage::url('img/'. $photo->pic . '_tn.jpg');
+        }
 
         return view('taggedPhotos')->with([
             'photos' => $photos,

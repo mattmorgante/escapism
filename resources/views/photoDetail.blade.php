@@ -34,17 +34,17 @@
 </div>
 
 
-@if (count($nearby) != 0 )
+@if (count($nearbyPhotos) != 0 )
 
 <div class="header">
     <h2>Other Places Nearby</h2>
 </div>
 
 <div class="flex-grid-thirds">
-    @foreach ($nearby as $photo)
+    @foreach ($nearbyPhotos as $nearbyPhoto)
     <div class="col">
-        <a href="/places/{{$photo->pic}}">
-            <img class="images"  src="/img/{{ $photo->thumbnail }}"><br>
+        <a href="/places/{{$nearbyPhoto->pic}}">
+            <img class="images" src="{{ $nearbyPhoto->url }}"><br>
         </a>
     </div>
     @endforeach

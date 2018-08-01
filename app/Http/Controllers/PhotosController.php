@@ -39,14 +39,18 @@ class PhotosController extends Controller
 
         Mapper::map($photo->lat, $photo->long, ['zoom' => 5]);
 
-        $nearby = [];
-        $nearby = Photos::whereBetween('lat', [$photo->lat - 5, $photo->lat + 5])->whereBetween('long',
+        $nearbyPhotos = [];
+        $nearbyPhotos = Photos::whereBetween('lat', [$photo->lat - 5, $photo->lat + 5])->whereBetween('long',
             [$photo->long -5, $photo->long + 5])->where('pic', '!=', $pic)->get();
+
+        foreach ($nearbyPhotos as $nearbyPhoto) {
+            $nearbyPhoto->url = Storage::url('img/'. $nearbyPhoto->pic . '_tn.jpg');
+        }
 
         return view('photoDetail')->with([
             'photo' => $photo,
             'tags' => $tags,
-            'nearby' => $nearby,
+            'nearbyPhotos' => $nearbyPhotos,
             'url' => $url
         ]);
     }

@@ -12,7 +12,7 @@
     @foreach ($photos as $photo)
     <div class="col">
         <a href="/places/{{$photo->pic}}">
-            <img class="images"  src="/img/{{ $photo->thumbnail }}"><br>
+            <img class="images"  src="{{ $photo->url }}"><br>
         </a>
     </div>
     @endforeach
