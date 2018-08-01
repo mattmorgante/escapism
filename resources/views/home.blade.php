@@ -13,7 +13,7 @@
 <div class="flex-grid-thirds">
     @foreach ($photos as $photo)
         <div class="col">
-            <a href="/places/{{$photo->slug}}">
+            <a href="/places/{{$photo->pic}}">
                 <img class="images" src="{{ $photo->url }}">
             </a>
         </div>

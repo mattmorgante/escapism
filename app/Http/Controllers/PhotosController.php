@@ -23,10 +23,10 @@ class PhotosController extends Controller
         ]);
     }
 
-    public function show($slug) {
-        $photo = Photos::where('slug', $slug)->first();
+    public function show($pic) {
+        $photo = Photos::where('pic', $pic)->first();
 
-        $key = md5('s3-img'.$photo->slug);
+        $key = md5('s3-img'.$photo->pic);
         if (Cache::has( $key )) {
             $url = Cache::get( $key );
         } else {
@@ -41,7 +41,7 @@ class PhotosController extends Controller
 
         $nearby = [];
         $nearby = Photos::whereBetween('lat', [$photo->lat - 5, $photo->lat + 5])->whereBetween('long',
-            [$photo->long -5, $photo->long + 5])->where('slug', '!=', $slug)->get();
+            [$photo->long -5, $photo->long + 5])->where('pic', '!=', $pic)->get();
 
         return view('photoDetail')->with([
             'photo' => $photo,

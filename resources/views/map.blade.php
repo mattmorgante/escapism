@@ -21,7 +21,7 @@
         var name = photos[i].location;
         var lat = photos[i].lat;
         var long = photos[i].long;
-        var link = photos[i].slug;
+        var link = photos[i].pic;
         locations.push([name, lat, long, i, link]);
     }
 

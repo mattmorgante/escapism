@@ -43,7 +43,7 @@
 <div class="flex-grid-thirds">
     @foreach ($nearby as $photo)
     <div class="col">
-        <a href="/places/{{$photo->slug}}">
+        <a href="/places/{{$photo->pic}}">
             <img class="images"  src="/img/{{ $photo->thumbnail }}"><br>
         </a>
     </div>
