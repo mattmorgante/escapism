@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'PhotosController@home');
-Route::get('/places/{pic}', 'PhotosController@show')->middleware('cors');
+Route::get('/places/{slug}', 'PhotosController@show');
+Route::get('/map', 'PhotosController@map');
+
 Route::get('/tags', 'TagsController@index');
 Route::get('/tag/{tag}', 'TagsController@show');
-Route::get('/map', 'PhotosController@map');

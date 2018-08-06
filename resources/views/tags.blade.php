@@ -4,7 +4,7 @@
 
 @include('partials.nav')
 
-<div class="flex-grid-thirds">
+<div class="custom-flex-grid">
 @foreach ($tags as $tag)
     <div class="col tags">
         <a href="/tag/{{ $tag }}">

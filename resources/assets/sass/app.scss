@@ -78,13 +78,13 @@ nav ul li a {
     padding-right: 15px;
 }
 
-.flex-grid-thirds {
+.custom-flex-grid {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-between;
 }
-.flex-grid-thirds .col {
+.custom-flex-grid .col {
     width: 24%;
     margin-bottom: 20px;
 }
@@ -141,7 +141,7 @@ button a {
 }
 
 @media (max-width: 676px) {
-    .flex-grid-thirds {
+    .custom-flex-grid {
         display: block;
         margin-top: 20px;
         line-height: 30px;

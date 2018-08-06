@@ -16,7 +16,7 @@ class CacheHeaders
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        $response->header('Cache-Control', 'max-age=36000, public');
+        $response->header('Cache-Control', 'max-age=72000, public');
 
         return $response;
     }

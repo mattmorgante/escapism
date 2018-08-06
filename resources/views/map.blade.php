@@ -10,10 +10,9 @@
 
 <div id="full-size-map"></div>
 
-
 <script type="text/javascript">
 
-    var photos = {!! json_encode($photos) !!};
+    var photos = {!! json_encode($photos) !!}
 
     var locations = [];
 
@@ -21,11 +20,9 @@
         var name = photos[i].location;
         var lat = photos[i].lat;
         var long = photos[i].long;
-        var link = photos[i].pic;
-        locations.push([name, lat, long, i, link]);
+        var link = photos[i].slug;
+        locations.push([name, lat, long, link]);
     }
-
-    console.log(locations);
 
     var map = new google.maps.Map(document.getElementById('full-size-map'), {
         zoom: 2,
@@ -45,9 +42,8 @@
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
-                contentString = '<a target="_blank" href="/places/' + locations[i][4] + '">'+ locations[i][0] + '</a>';
+                contentString = '<a target="_blank" href="/places/' + locations[i][3] + '">'+ locations[i][0] + '</a>';
                 infowindow.setContent(contentString);
-                // infowindow.setContent(locations[i][0]);
                 infowindow.open(map, marker);
             }
         })(marker, i));

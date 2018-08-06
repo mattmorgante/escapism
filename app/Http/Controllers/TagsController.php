@@ -10,9 +10,8 @@ use Illuminate\Support\Facades\Storage;
 class TagsController extends Controller
 {
     public function index() {
-        $tags = Tags::all()->pluck('name');
         return view('tags')->with([
-            'tags' => $tags,
+            'tags' => Tags::all()->pluck('name')
         ]);
     }
 
@@ -22,7 +21,7 @@ class TagsController extends Controller
         $photos = Photos::where('tags', 'like', '%' . $tag->name . '%')->get();
 
         foreach ($photos as $photo) {
-            $photo->url = Storage::url('img/'. $photo->pic . '_tn.jpg');
+            $photo->url = Photos::getPhotoUrl($photo, 'tn');
         }
 
         return view('taggedPhotos')->with([

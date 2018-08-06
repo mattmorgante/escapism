@@ -8,14 +8,12 @@
 </div>
 
 <div class="image_wrapper">
-        <img class="detail_image" src="{{ $url }}">
+    <img class="detail_image" src="{{ $url }}">
 </div>
-
-
 
 <div class="below-image">
     <div class="caption_wrapper">
-        <div class="flex-grid-thirds">
+        <div class="custom-flex-grid">
             @foreach ($tags as $tag)
             <div class="tag-wrapper">
                 <button class="tag-buttons"><a href="/tag/{{ $tag }}">#{{ $tag}}</a></button>
@@ -23,8 +21,8 @@
             @endforeach
         </div>
         <br>
-        <div class="flex-grid-thirds">
-                <button class="external-button"><a class="external-link" target="_blank" href="{{ $photo->link }}">Read About This Place</a></button>
+        <div class="custom-flex-grid">
+            <button class="external-button"><a class="external-link" target="_blank" href="{{ $photo->link }}">Read About This Place</a></button>
         </div>
     </div>
 
@@ -40,10 +38,10 @@
     <h2>Other Places Nearby</h2>
 </div>
 
-<div class="flex-grid-thirds">
+<div class="custom-flex-grid">
     @foreach ($nearbyPhotos as $nearbyPhoto)
     <div class="col">
-        <a href="/places/{{$nearbyPhoto->pic}}">
+        <a href="/places/{{$nearbyPhoto->slug}}">
             <img class="images" src="{{ $nearbyPhoto->url }}"><br>
         </a>
     </div>
