@@ -54,7 +54,19 @@ nav ul li a {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 676px) {
+  .custom-flex-grid {
+    display: block;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  .custom-flex-grid .col {
+    width: 100%;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
   .google-map {
     margin: 0 auto;
   }
@@ -166,24 +178,6 @@ button a {
   color: black;
 }
 
-@media (max-width: 676px) {
-  .custom-flex-grid {
-    display: block;
-    margin-top: 20px;
-    line-height: 30px;
-  }
-
-  .custom-flex-grid .col {
-    width: 100%;
-    margin: 0 0 10px 0;
-    text-align: center;
-  }
-
-  .google-map {
-    margin: 0 auto;
-  }
-}
-
 .tags {
   border: black solid 1px;
   border-radius: 7px;
@@ -227,6 +221,10 @@ button a {
   color: white;
 }
 
+.tag-buttons:hover a {
+  color: white;
+}
+
 .external-button {
   background-color: white;
   border: 2px solid #e4a023;
@@ -252,7 +250,7 @@ button a {
 #full-size-map {
   width: 85vw;
   height: 60vw;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .caption_wrapper {
