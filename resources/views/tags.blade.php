@@ -4,14 +4,15 @@
 
 @include('partials.nav')
 
-<div class="custom-flex-grid">
-@foreach ($tags as $tag)
-    <div class="col tags">
-        <a href="/tag/{{ $tag }}">
-            <p>#{{ $tag}}</p>
-        </a>
+<div class="container">
+    <div class="custom-flex-grid tags-wrapper">
+    @foreach ($tags as $tag)
+        <div class="col tags">
+            <a href="/tag/{{ $tag }}">
+                <p>#{{ $tag}}</p>
+            </a>
+        </div>
+    @endforeach
     </div>
-@endforeach
 </div>
-
 @endsection

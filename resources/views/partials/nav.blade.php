@@ -2,7 +2,7 @@
     <div class="nav-left">
         <ul>
             <li>
-            <a class="external-link" onclick=refresh()>Escapism</a>
+                <a class="external-link" onclick=refresh()>Escapism</a>
             </li>
         </ul>
     </div>

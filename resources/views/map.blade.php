@@ -8,7 +8,9 @@
 
 @include('partials.nav')
 
-<div id="full-size-map"></div>
+<div class="container">
+    <div id="full-size-map"></div>
+</div>
 
 <script type="text/javascript">
 

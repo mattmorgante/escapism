@@ -4,18 +4,20 @@
 
 @include('partials.nav')
 
-<div class="header">
-    <h1>#{{ $tagName }}</h1>
-</div>
-
-<div class="custom-flex-grid">
-    @foreach ($photos as $photo)
-    <div class="col">
-        <a href="/places/{{$photo->slug}}">
-            <img class="images"  src="{{ $photo->url }}"><br>
-        </a>
+<div class="container">
+    <div class="header">
+        <h1>#{{ $tagName }}</h1>
     </div>
-    @endforeach
+
+    <div class="custom-flex-grid">
+        @foreach ($photos as $photo)
+        <div class="col">
+            <a href="/places/{{$photo->slug}}">
+                <img class="images"  src="{{ $photo->url }}"><br>
+            </a>
+        </div>
+        @endforeach
+    </div>
 </div>
 
 @endsection
