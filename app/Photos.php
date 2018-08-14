@@ -11,8 +11,8 @@ class Photos extends Model
     protected $table = 'photos';
 
     public static function getNearbyPhotos($photo) {
-        $nearbyPhotos = Photos::whereBetween('lat', [$photo->lat - 5, $photo->lat + 5])->whereBetween('long',
-            [$photo->long -5, $photo->long + 5])->where('slug', '!=', $photo->slug)->get();
+        $nearbyPhotos = Photos::whereBetween('lat', [$photo->lat - 6, $photo->lat + 6])->whereBetween('long',
+            [$photo->long - 6, $photo->long + 6])->where('slug', '!=', $photo->slug)->get();
 
         foreach ($nearbyPhotos as $nearbyPhoto) {
             $nearbyPhoto->url = Storage::url('img/'. $nearbyPhoto->slug . '_tn.jpg');
